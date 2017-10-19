@@ -12,6 +12,7 @@ class htmlTag {
 
         }
         static public function content($text) {
+            echo '<td>'.$text.'</td>';
             
         }
         static public function tablerow() {
