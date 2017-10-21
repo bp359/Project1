@@ -1,5 +1,5 @@
 <?php
-class formUpload extends page
+class formUpload extends page //Using get and post function to load file into directory                   
     {
         public function get() {                          
             $form = '<form action="index.php?page=formUpload" method="POST" enctype="multipart/form-data">';
