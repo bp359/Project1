@@ -1,9 +1,9 @@
  <?php
  class htmlTab extends page {                          
         public function get() {
-            $csv = $_GET['filename'];
+            $form = $_GET['filename'];
             chdir('uploads');                                    
-            $file = fopen($csv,"r");
+            $file = fopen($form,"r");
             htmlTag::table();               
             $row = 1;
             while (($data=fgetcsv($file))!== FALSE){    
