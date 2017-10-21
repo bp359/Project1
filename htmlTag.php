@@ -1,5 +1,5 @@
 <?php
-class htmlTag {            
+class htmlTag {            // HTML tags for display of table
         static public function heading($text) {
             return '<h1><center><u>' . $text . '</u></center></h1>';
         }

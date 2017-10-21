@@ -1,17 +1,17 @@
 <?php
-    ini_set('display_errors', 'On');                          
+    ini_set('display_errors', 'On');  //debugging message is on                    
     error_reporting(E_ALL);
     class manage{                                             
         public static function autoload($class) {
             include $class . '.php';
         }
     }
-    spl_autoload_register(array('manage', 'autoload'));
+    spl_autoload_register(array('manage', 'autoload')); // calling autoload
 
-    $obj = new main();                                            
+    $obj = new main(); // instatiation of the object                                          
 
     class main {
-        public function __construct() {
+        public function __construct() { //requests page to display
             $pageRequest = 'formUpload';
             if(isset($_REQUEST['page'])) {
                 $pageRequest = $_REQUEST['page'];
@@ -25,7 +25,7 @@
         }
     }
 
-abstract class page {
+abstract class page { 
         protected $html;
         public function  __construct() {
             $this->html .= '<html>';
@@ -34,7 +34,7 @@ abstract class page {
         }
         public function __destruct() {
             $this->html .= '</body></html>';
-            string::printThis($this->html);
+            string::printThis($this->html); //prints required page
         }
         public function get() {
             echo 'default get message';
